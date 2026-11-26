@@ -352,17 +352,30 @@ nav {
 }
 
 .world-time {
-  display: flex;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 32px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 420px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .time-card {
   background: var(--social-bg);
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 20px 12px;
   text-align: center;
-  flex: 1;
+  min-width: 0;
 
   h3 {
     margin: 0 0 12px;
@@ -372,10 +385,11 @@ nav {
   }
 
   .time {
-    font-size: 40px;
+    font-size: clamp(24px, 3.6vw, 32px);
     font-weight: 600;
     font-family: monospace;
     margin: 8px 0;
+    white-space: nowrap;
   }
 
   .date {

@@ -5,6 +5,10 @@ const CITIES = [
   { name: '孟加拉国（达卡）', timezone: 'Asia/Dhaka' },
   { name: '尼日利亚（拉各斯）', timezone: 'Africa/Lagos' },
   { name: '阿联酋（迪拜）', timezone: 'Asia/Dubai' },
+  { name: '泰国（曼谷）', timezone: 'Asia/Bangkok' },
+  { name: '秘鲁（利马）', timezone: 'America/Lima' },
+  { name: '荷兰（阿姆斯特丹）', timezone: 'Europe/Amsterdam' },
+  { name: '阿尔及利亚（阿尔及尔）', timezone: 'Africa/Algiers' },
 ]
 
 function Home() {
