@@ -5,7 +5,7 @@ import babel from '@rolldown/plugin-babel'
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   // GitHub Pages 项目页部署在 /toastduck-tools/ 子路径下，产物资源必须走这个前缀
-  base: mode === 'production' ? '/toastduck-tools/' : '/',
+  base: '/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
